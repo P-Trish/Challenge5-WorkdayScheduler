@@ -1,24 +1,62 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+const workHours = [
+"9:00 AM",
+"10:00 AM",
+"11:00 AM",
+"12:00 PM",
+"1:00 PM",
+"2:00 PM",
+"3:00 PM",
+"4:00 PM",
+"5:00 PM"
+];
+
+const workHoursNum = [
+  9, 10, 11, 12, 13, 14, 15, 16, 17
+];
 
 $(function () {
 
-var timeBlocksEl= $('#timeBlocks');
-var hour9 = $('<div class ="row time-block past">');
+  // Added code to display the current date in the header of the page.
 
-timeBlocksEl.append(hour9);
+  var currentDate = dayjs();
+  $('#currentDay').text(currentDate.format('dddd, MMMM DD, YYYY hh:mm A'));
 
-var pTag = $('<p>');
-pTag.text("Is this working?");
-hour9.append(pTag);  
+  // var currentHour = dayjs().format("H");
+  var currentHour = 10;
+  console.log(currentHour);
+
+  var timeBlocksEl= $('#timeBlocks');
 
 
 
-   // Added code to display the current date in the header of the page.
-var currentDate = dayjs();
-$('#currentDay').text(currentDate.format('dddd, MMMM DD, YYYY'));
+for (var i=0; i< workHours.length; i++) {
+  var hourBlock = $('<div class ="row time-block">');
+  hourBlock.addClass("");
 
+if (workHoursNum [i]< currentHour) {
+  hourBlock.addClass("past")
+}
+
+  var hourDiv = $('<div class="col-2 col-md-1 hour text-center py-3">');
+  var task = $('<textarea class= "col-8 col-md-10 description" rows="3">');
+  var saveBtn = $('<button class = "btn saveBtn col-2 col-md-1" aria-label="save">');
+  var saveIcon = $('<i class="fas fa-save" aria-hidden="true">');
+  timeBlocksEl.append(hourBlock);
+  hourBlock.append(hourDiv);
+  hourBlock.append(task);
+  hourBlock.append(saveBtn);
+  hourDiv.text(workHours[i]);
+  saveBtn.append(saveIcon);
+}
+
+
+
+	
+
+ 
 
 
   // TODO: Add a listener for click events on the save button. This code should
