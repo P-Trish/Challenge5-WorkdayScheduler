@@ -37,8 +37,13 @@ for (var i=0; i< workHours.length; i++) {
   hourBlock.addClass("");
 
 if (workHoursNum [i]< currentHour) {
-  hourBlock.addClass("past")
+  hourBlock.addClass("past");
 }
+else if (workHoursNum [i] == currentHour) {
+  hourBlock.addClass("present");
+}
+else {hourBlock.addClass("future");}
+
 
   var hourDiv = $('<div class="col-2 col-md-1 hour text-center py-3">');
   var task = $('<textarea class= "col-8 col-md-10 description" rows="3">');
