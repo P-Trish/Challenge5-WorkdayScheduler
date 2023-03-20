@@ -30,6 +30,7 @@ $(function () {
   console.log(currentHour);
 
   var timeBlocksEl= $('#timeBlocks');
+  
 
    // TODO: Add code to apply the past, present, or future class to each time block by comparing the id to the current hour. 
   // HINTS: How can the id attribute of each time-block be used to conditionally add or remove the
@@ -60,19 +61,38 @@ else {hourBlock.addClass("future");}
   hourDiv.text(workHours[i]);
   saveBtn.append(saveIcon);
 
+  // saveBtn.on("click", function (event) {
+  //   event.preventDefault();
+  
+  
+
+  //   var userInput = "";
+  //   localStorage.setItem("task", userInput);
+  
+  //   // task (userInput)
+  //   // userInput written to the task var to be saved in local storage
+  //   });
+    
 
   }
   
+  var timeBlockRow = $('.time-block');
 
-
-
-// saveBtn.addEventListener ("click" function (event) {
-//   event.preventDefault();
-
-//   var userInput = ("");
-//   });
+  timeBlockRow.on("click", ".saveBtn", function (event) {
+    event.preventDefault();
   
-//   localStorage.setItem(userInput, "");
+    console.log($( this ).parent().children().eq(0).text());
+
+    var taskRow = $( this ).parent().children().eq(0).text();
+
+    var userInput = "";
+    localStorage.setItem(taskRow, userInput);
+  
+  
+    // userInput written to the task var to be saved in local storage
+    });
+    
+
   
 
 
