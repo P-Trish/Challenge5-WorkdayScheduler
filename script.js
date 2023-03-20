@@ -60,12 +60,20 @@ else {hourBlock.addClass("future");}
   hourDiv.text(workHours[i]);
   saveBtn.append(saveIcon);
 
-  var userInput = ("");
-  localStorage.setItem(userInput, "");
+
+  }
+  
 
 
-}
 
+// saveBtn.addEventListener ("click" function (event) {
+//   event.preventDefault();
+
+//   var userInput = ("");
+//   });
+  
+//   localStorage.setItem(userInput, "");
+  
 
 
 	
