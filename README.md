@@ -4,6 +4,9 @@
 
 In homework 5 of the Full-Stack Bootcamp, students were challenged to create a Work Day Scheduler.  This work day scheduler is a simple calendar app for scheduling user tasks between the hours of 9:00 AM to 5:00 PM.  The motivation for this project was to utilize skills learned about third-party APIs and create a functioning scheduler to keep track of our daily tasks.  This project was built for anyone that needs help with organization of tasks and events throughout their "working" hours.  The workday scheduler was created by applying jQuery concepts of creating new elements and appending them to the page as well as calling functions and setting an event listener.This app solves the problem of organization by being a catch-all in remembering the user's tasks by storing them in local storage for them to come back to.  The user can then refer back to this scheduler to see the current time of day as well as what event/task is next on their day's schedule.  This allows the user, or myself to see our day as a whole so we can arrange and see what is priority for each day.  The live day, date, and time are retrieved via dayjs.  By completing this challenege, I learned to further apply and practice my learned jQuery & JavaScript skills to create a practical app that can be widely used.  
 
+Link to deployed app: 
+https://p-trish.github.io/Challenge5-WorkdayScheduler/
+
 ## Installation
 
 N/A
