@@ -92,7 +92,6 @@ $(function () {
     var userInput = $(this).parent().children().eq(1).val();
     localStorage.setItem(taskRow, userInput);
 
-
   });
 
 });
